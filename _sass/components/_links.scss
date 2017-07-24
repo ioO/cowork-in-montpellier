@@ -3,7 +3,8 @@
 a {
 
   &,
-  &:visited {
+  &:visited,
+  &:hover {
     color: $default-color;
   }
 }

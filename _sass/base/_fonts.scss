@@ -9,12 +9,12 @@
 
 $default-font: $default-font;
 
-html { 
+html {
   font-size: 62.5%; /* 10px */
   font-size: calc(1em * 0.625); /* fix */
 }
 body {
   font-family: $default-font, Arial, sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 1.25;
 }

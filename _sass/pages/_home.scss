@@ -1,90 +1,135 @@
 @charset "UTF-8";
 
-.prices-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
-  border: 1px solid #000;
 
-  div {
-    flex-basis: 20%;
+.home {
+
+    section {
+        margin-bottom: 6rem;
+    }
+
+    .btn {
+        margin-bottom: 4rem;
+    }
+}
+
+.prices-nav {
+    display: flex;
+    margin-bottom: 3rem;
+
+    a {
+        flex-basis: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:before {
+            content: '>';
+        }
+
+        &:last-child {
+            color: $dark-blue;
+        }
+
+        span {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: normal;
+            color: #000;
+        }
+    }
+}
+
+.prices-wrapper {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.price-content {
+    flex-basis: calc(100% / 6);
     text-align: center;
 
-    &:not(:first-of-type) {
-      border-left: 1px solid #000;
+    &:not(:first-child) {
+        margin-left: .2rem;
     }
-  }
 
-  ul {
-    margin: 0;
-    list-style-type: none;
-  }
-
-  @media screen and (max-width: 960px) {
-
-    div {
-      flex-basis: 33.3333%;
-
-      &:first-of-type,
-      &:nth-of-type(2) {
-        flex-basis: 50%;
-      }
+    &:not(:last-child) {
+        margin-right: .2rem;
     }
-  }
-
-  @media screen and (max-width: 600px) {
-
-    div {
-
-      &,
-      &:first-of-type,
-      &:nth-of-type(2) {
-        flex-basis: 100%;
-      }
-
-      &:not(:first-of-type) {
-        border-top: 1px solid #000; 
-        border-left: 0;
-      }
-    }
-    
-    .price-desc {
-      min-height: 0;
-    }
-  }
 }
 
 .price-name {
-  padding: 2rem 0;
-  color: #fff;
-  background-color: $default-color;
+    padding: 2rem 0;
+    color: #fff;
+
+    &.nomad {
+        background-color: $default-color;
+    }
+
+    &.regulier {
+        background-color: $dark-blue;
+    }
+
+    h3 {
+        margin-bottom: 0;
+        font-size: 2.5rem;
+    }
 }
 
-.price-desc,
 .price-value {
-  font-weight: bold;
+    display: block;
+    padding: 2rem 0;
+    font-size: 2.1rem;
+    font-weight: bold;
+    background-color: lighten(grey, 45%);
+
+    .nomad + & {
+        color: $default-color;
+    }
+
+    .regulier + & {
+        color: $dark-blue;
+    }
 }
 
 .price-desc {
-  min-height: 5rem;
-  margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    font-size: 1.8rem;
+
+    span {
+        font-size: 1.4rem;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
 }
 
-.price-value {
-  font-size: 2.4rem;
-  color: $default-color;
-  margin: 2rem 0;
+.come {
+    margin-top: 4rem;
+    text-align: center;
 }
 
-.free-day {
-  max-width: 80%;
-  margin: 0 auto;
-  font-weight: bold;
-  text-align: center;
-}
+.meeting-prices-wrapper {
+    display: flex;
+    margin-bottom: 3rem;
 
+    .price-content {
+        flex-basis: 50%;
+    }
+
+    h3 span {
+        display: block;
+        font-size: 1.6rem;
+    }
+}
 
 .home-editable-content {
-  margin: 6rem 0;
-  
+    margin: 6rem 0;
+
+    h2 {
+        margin-top: 4rem;
+    }
 }

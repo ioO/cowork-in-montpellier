@@ -4,4 +4,21 @@ button {
   cursor: pointer;
 }
 
-//Need to reset default style
+a.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 2.4rem;
+    color: #fff !important;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $default-color;
+    border-radius: .8rem;
+    border: 2px solid $default-color;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        color: $default-color !important;
+        text-decoration: none;
+        background-color: #fff;
+    }
+}
