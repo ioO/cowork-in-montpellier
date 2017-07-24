@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+a {
+
+  &,
+  &:visited,
+  &:hover {
+    color: $default-color;
+  }
+}

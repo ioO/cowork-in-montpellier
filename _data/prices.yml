@@ -1,0 +1,42 @@
+coworking:
+    -   class: nomad
+        name: Journée
+        condition: tu ne fais que passer
+        desc: Accès une journée
+        value: 12 €
+
+    -   class: nomad
+        name: 10 jours
+        condition: tu passes à l'occase
+        desc: valable 1 an <br/>  <span>utilisable comme 20 demi-journées</span>
+        value: 110 €
+
+    -   class: regulier
+        name: Mid time
+        condition:
+        desc: 10 jours / mois
+        value: 100 € / mois
+
+    -   class: regulier
+        name: Part time
+        condition:
+        desc: 3 jours / semaine
+        value: 120 € / mois
+
+    -   class: regulier
+        name: Full time
+        condition: tu viens tous les jours pendant 1 mois
+        desc: Accès illimité
+        value: 180 € /mois
+
+    -   class: regulier
+        name: Bureau fixe
+        condition: tu viens tous les jours et tu as besoin de laisser ton matos
+        desc: Accès illimité en laissant son matériel
+        value: 230 € /mois
+
+meeting:
+    -   name: Petite salle <span>De 3 à 5 personnes assises</span>
+        value: 40 €
+    -   name: Grande salle <span>Entre 6 et 12 personnes assises</span>
+        value: 50 €

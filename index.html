@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<div class="home">
+
+    <section class="intro">
+        <h2>Le cowork’in, c’est :</h2>
+
+        <p>Un tas de gens normaux (développeur, œnologue, graphiste, agent immobilier, entomologiste, traducteur, musicien, commercial, illustrateur,…)<br>Partageant des bureaux, une cuisine, quelques plantes, une cour ensoleillée, des apéros…</p>
+    </section>
+
+    <section class="prices">
+        <h2>Tarifs coworking</h2>
+
+        <nav class="prices-nav">
+            <a href="">
+                Coworker ponctuel
+                <span>Tu viens un ou plusieurs jours, de manière non régulière </span>
+            </a>
+            <a href="">
+                Coworker régulier
+                <span>Tu viens au moins 10 jours dans le mois</span>
+            </a>
+        </nav>
+
+        <div class="prices-wrapper">
+
+            {% for price in site.data.prices.coworking %}
+            <div class="price-content">
+                <div class="price-name {{price.class}}">
+                    <h3>{{ price.name }}</h3>
+                </div>
+                <div class="price-value">
+                    {{ price.value }}*
+                </div>
+                <div class="price-desc">
+                    <p>{{ price.desc }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <p>
+            * Tarification sans perfidie : tu as droit à <a href="{{site.url}}/espace#services">tous les services</a> disponibles sur place, quelle que soit la formule choisie. Nos forfaits au mois ne t'engagent qu’un mois.
+        </p>
+
+        <div class="come">
+            <p>
+                Sceptique, dubitatif, enjoué ? La première journée est gratuite, viens tester !
+            </p>
+            <p>
+                <a href="#inscription" class="btn">Venir tester</a>
+            </p>
+        </div>
+
+        <h2>Tarifs location de salle</h2>
+        <div class="meeting-prices-wrapper">
+
+            {% for price in site.data.prices.meeting %}
+            <div class="price-content">
+                <div class="price-name nomad">
+                    <h3>{{ price.name }}</h3>
+                </div>
+                <div class="price-value">
+                    {{ price.value }} / demi-journée
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <p>Accès à la cuisine, wifi, thé et café, écran, paperboard…</p>
+        <p>La location de salle dépend de l’occupation des lieux et de la durée : <a href="{{site.url}}/contact">écris-nous</a> en expliquant tes besoins, nous te dirons si c'est possible.</p>
+    </section>
+
+    <section class="home-editable-content">
+        {% for post in site.posts %}
+        {% if post.location == "home" %}
+        {{ post.content }}
+        {% endif %}
+        {% endfor %}
+    </section>
+
+</div>

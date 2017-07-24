@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+$border-color: $default-color;
+
+/* Forms */
+input,
+textarea,
+select,
+button {
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+/* Labels */
+label {
+  display: block;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  margin-bottom: 2rem;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.6rem;
+  border: 1px solid $border-color;
+} 
+
+[type="radio"],
+[type="checkbox"] {
+ & + label {
+  display: inline-block;
+  }
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+}
+
+//Default cursor for buttons
+input[type="submit"],
+button {
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: $default-color;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+  &:hover {
+    color: $default-color;
+    background-color: #fff;
+    border-color: $default-color;
+  }
+}

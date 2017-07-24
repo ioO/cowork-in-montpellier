@@ -1,0 +1,290 @@
+/*
+Comment everything not useful for the current project
+*/
+/* --- Base --- */
+/* --- * --- */
+* {
+  box-sizing: border-box; }
+
+/* --- Body --- */
+body {
+  margin: 0;
+  background-color: #fff; }
+
+.center {
+  text-align: center; }
+
+/*Font-face declaration example*/
+html {
+  font-size: 62.5%;
+  /* 10px */
+  font-size: calc(1em * 0.625);
+  /* fix */ }
+
+body {
+  font-family: "", Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 1.25; }
+
+/* --- Layout --- */
+.container {
+  margin: 0 auto;
+  width: "980px"; }
+
+@media (max-width: 980px) {
+  .container {
+    padding: 0 20px;
+    width: 100%; } }
+.site-header {
+  margin-bottom: 3rem;
+  background-color: #36a8e0;
+  color: #fff; }
+  .site-header h1 {
+    position: relative; }
+    .site-header h1:after {
+      content: attr(data-title);
+      position: absolute;
+      left: 0;
+      bottom: -3rem;
+      right: 0;
+      margin: auto;
+      display: block;
+      font-size: 2rem;
+      opacity: 0;
+      transition: all 0.3s; }
+    .site-header h1:hover:after {
+      bottom: -5rem;
+      visibility: visible;
+      opacity: 1; }
+
+.site-header {
+  border-top: 4px solid #36a8e0;
+  border-bottom: none; }
+
+.site-footer {
+  border-top: none; }
+  .site-footer h2 {
+    font-size: 2rem;
+    text-align: center; }
+  .site-footer nav {
+    display: flex;
+    justify-content: center; }
+    .site-footer nav a {
+      margin: 0 2rem; }
+    @media screen and (max-width: 600px) {
+      .site-footer nav {
+        justify-content: space-around; }
+        .site-footer nav a {
+          margin: 0; } }
+
+/* --- Components --- */
+/* --- Nav --- */
+nav a {
+  text-decoration: none; }
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  float: none;
+  margin: 3rem 0; }
+  .site-nav > a {
+    font-size: 2.4rem;
+    text-align: center; }
+    .site-nav > a, .site-nav > a:visited {
+      color: #fff; }
+  .site-nav .logo {
+    flex-basis: 25rem; }
+    .site-nav .logo img {
+      max-width: 25rem; }
+  @media screen and (max-width: 600px) {
+    .site-nav {
+      align-items: stretch;
+      flex-wrap: wrap;
+      position: relative;
+      top: 0;
+      right: auto;
+      background: none;
+      border: none; }
+      .site-nav a {
+        order: 2; }
+      .site-nav .logo {
+        order: 1;
+        flex-basis: 100%; } }
+
+/* Forms */
+input,
+textarea,
+select,
+button {
+  font-size: 1em;
+  vertical-align: middle; }
+
+/* Labels */
+label {
+  display: block; }
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  margin-bottom: 2rem;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.6rem;
+  border: 1px solid #36a8e0; }
+
+[type="radio"] + label,
+[type="checkbox"] + label {
+  display: inline-block; }
+
+/* Textarea */
+textarea {
+  resize: vertical; }
+
+input[type="submit"],
+button {
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: #36a8e0;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s; }
+  input[type="submit"]:hover,
+  button:hover {
+    color: #36a8e0;
+    background-color: #fff;
+    border-color: #36a8e0; }
+
+button {
+  cursor: pointer; }
+
+a.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  color: #fff !important;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #36a8e0;
+  border-radius: .8rem;
+  border: 2px solid #36a8e0;
+  transition: all .2s ease-in-out; }
+  a.btn:hover {
+    color: #36a8e0 !important;
+    text-decoration: none;
+    background-color: #fff; }
+
+a, a:visited, a:hover {
+  color: #36a8e0; }
+
+/* --- Pages --- */
+.home section {
+  margin-bottom: 6rem; }
+.home .btn {
+  margin-bottom: 4rem; }
+
+.prices-nav {
+  display: flex;
+  margin-bottom: 3rem; }
+  .prices-nav a {
+    flex-basis: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold; }
+    .prices-nav a:before {
+      content: '>'; }
+    .prices-nav a:last-child {
+      color: #1f3863; }
+    .prices-nav a span {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: #000; }
+
+.prices-wrapper {
+  display: flex;
+  margin-bottom: 1rem; }
+
+.price-content {
+  flex-basis: calc(100% / 6);
+  text-align: center; }
+  .price-content:not(:first-child) {
+    margin-left: .2rem; }
+  .price-content:not(:last-child) {
+    margin-right: .2rem; }
+
+.price-name {
+  padding: 2rem 0;
+  color: #fff; }
+  .price-name.nomad {
+    background-color: #36a8e0; }
+  .price-name.regulier {
+    background-color: #1f3863; }
+  .price-name h3 {
+    margin-bottom: 0;
+    font-size: 2.5rem; }
+
+.price-value {
+  display: block;
+  padding: 2rem 0;
+  font-size: 2.1rem;
+  font-weight: bold;
+  background-color: #f3f3f3; }
+  .nomad + .price-value {
+    color: #36a8e0; }
+  .regulier + .price-value {
+    color: #1f3863; }
+
+.price-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  font-size: 1.8rem; }
+  .price-desc span {
+    font-size: 1.4rem; }
+  .price-desc p {
+    margin-bottom: 0; }
+
+.come {
+  margin-top: 4rem;
+  text-align: center; }
+
+.meeting-prices-wrapper {
+  display: flex;
+  margin-bottom: 3rem; }
+  .meeting-prices-wrapper .price-content {
+    flex-basis: 50%; }
+  .meeting-prices-wrapper h3 span {
+    display: block;
+    font-size: 1.6rem; }
+
+.home-editable-content {
+  margin: 6rem 0; }
+  .home-editable-content h2 {
+    margin-top: 4rem; }
+
+.contact-wrapper {
+  display: flex; }
+  .contact-wrapper > div {
+    flex-basis: 49%; }
+    .contact-wrapper > div:not(:first-child) {
+      margin-left: 2%; }
+  @media screen and (max-width: 960px) {
+    .contact-wrapper {
+      flex-direction: column; }
+      .contact-wrapper > div {
+        flex-basis: auto; }
+        .contact-wrapper > div:not(:first-child) {
+          min-height: 20rem;
+          margin-top: 3rem;
+          margin-left: 0; }
+          .contact-wrapper > div:not(:first-child) iframe {
+            height: 30rem; } }
+
+/* --- Vendors --- */
+/*@import "vendors/"*/
+
+/*# sourceMappingURL=styles.css.map */
